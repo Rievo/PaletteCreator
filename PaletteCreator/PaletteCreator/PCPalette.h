@@ -17,4 +17,7 @@
 @property NSString * information;
 @property NSString * identifier;
 
+
+-(instancetype)initWithDictionary:(NSDictionary *)dic;
+
 @end

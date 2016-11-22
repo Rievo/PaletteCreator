@@ -74,20 +74,10 @@
 
 - (IBAction)savePalette:(id)sender {
     
-    if(palettePreview.palette.colors.count > 0){
-
-        [dele.palettes addObject:palettePreview.palette];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"updatePalettesTable"
-                                                            object:self
-                                                          userInfo:nil];
-        
-        UINavigationController *nav = self.navigationController;
-        [nav popViewControllerAnimated:YES];
-    }else{
+    if(nameTextField.text.length == 0){
         UIAlertController * alert=   [UIAlertController
                                       alertControllerWithTitle:@"Error"
-                                      message:@"There must be at least a color"
+                                      message:@"Name cannot be empty"
                                       preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
@@ -97,7 +87,34 @@
         [alert addAction:okAction];
         UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
         [vc presentViewController:alert animated:YES completion:nil];
+    }else{
+        if(palettePreview.palette.colors.count > 0){
+            
+            [dele.palettes addObject:palettePreview.palette];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"updatePalettesTable"
+                                                                object:self
+                                                              userInfo:nil];
+            
+            UINavigationController *nav = self.navigationController;
+            [nav popViewControllerAnimated:YES];
+        }else{
+            UIAlertController * alert=   [UIAlertController
+                                          alertControllerWithTitle:@"Error"
+                                          message:@"There must be at least a color"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                
+                //do something when click button
+            }];
+            [alert addAction:okAction];
+            UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+            [vc presentViewController:alert animated:YES completion:nil];
+        }
     }
+    
+    
     
 }
 

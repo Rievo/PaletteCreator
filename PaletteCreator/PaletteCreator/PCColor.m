@@ -86,5 +86,16 @@
 }
 
 
+-(NSDictionary *)convertToDictionary{
+    NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
+    
+    [dic setObject:[NSNumber numberWithInt:_red] forKey:@"red"];
+    [dic setObject:[NSNumber numberWithInt:_green] forKey:@"green"];
+    [dic setObject:[NSNumber numberWithInt:_blue] forKey:@"blue"];
+    
+    return dic;
+}
+
+
 
 @end

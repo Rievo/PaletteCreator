@@ -40,56 +40,9 @@
 }
 
 
--(NSString *)generateXML{
-    NSString * text = @"";
-    
-    //text = [text stringByAppendingString:@""];
-    
-    
-    //Palettes
-    text = [text stringByAppendingString:@"<palettes>"];
-    
-    for(int i = 0; i< dele.palettes.count; i++){
-        PCPalette * temp = dele.palettes[i];
-        text = [text stringByAppendingString:[NSString stringWithFormat:@"<palette name=\"%@\">", temp.name]];
-        
-        //For each color
-        for(PCColor * pccolor in temp.colors){
-         
-            
-            text = [text stringByAppendingString:[NSString stringWithFormat:@"<color red=\"%d\" green=\"%d\" blue=\"%d\"/>",pccolor.red,pccolor.green, pccolor.blue]];
-        }
-        text = [text stringByAppendingString:@"</palette>"];
-    }
-    text = [text stringByAppendingString:@"</palettes>"];
-    
-    return text;
-}
 
 
-- (IBAction)generateXML:(id)sender {
-    [self generateXML];
-}
 
-
--(void) writeToTextFile{
-    //get the documents directory:
-    NSArray *paths = NSSearchPathForDirectoriesInDomains
-    (NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    //make a file name to write the data to using the documents directory:
-    NSString *fileName = [NSString stringWithFormat:@"%@/palettes.xml",
-                          documentsDirectory];
-    //create content - four lines of text
-    NSString *content = [self generateXML];
-    //save content to the documents directory
-    [content writeToFile:fileName
-              atomically:NO
-                encoding:NSStringEncodingConversionAllowLossy
-                   error:nil];
-    
-}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return dele.palettes.count;
@@ -109,6 +62,11 @@
     [cell.paletteView setNeedsDisplay];
     NSLog(@"Palette.colors= %lu", (unsigned long)palette.colors.count);
     return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 -(void)reloadTable:(NSNotification *)not{

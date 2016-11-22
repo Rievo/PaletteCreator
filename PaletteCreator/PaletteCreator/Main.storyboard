@@ -73,14 +73,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8A-Sl-0kE">
-                                <rect key="frame" x="217" y="481" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Generatexml"/>
-                                <connections>
-                                    <action selector="generateXML:" destination="9pv-A4-QxB" eventType="touchUpInside" id="yL5-Pe-76v"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuA-ey-PnX">
                                 <rect key="frame" x="282" y="24" width="22" height="22"/>
                                 <connections>

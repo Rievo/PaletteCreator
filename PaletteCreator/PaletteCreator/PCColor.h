@@ -21,4 +21,6 @@
 - (instancetype)initWithHexString:(NSString *)str;
 - (instancetype)initWithRed:(float)r andGreen:(float)g andBlue:(float) b andAlpha:(float)a;
 - (instancetype)initWith255Red:(int)r andGreen:(int)g andBlue:(int) b andAlpha:(float)a;
+
+-(NSDictionary *)convertToDictionary;
 @end

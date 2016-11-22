@@ -19,6 +19,8 @@
 		F118A7181DDB5D8100F4EE25 /* PCPaletteCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F118A7101DDB5D8100F4EE25 /* PCPaletteCellTableViewCell.m */; };
 		F118A7191DDB5D8100F4EE25 /* PCPaletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = F118A7121DDB5D8100F4EE25 /* PCPaletteView.m */; };
 		F118A71B1DDB5DF800F4EE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F118A71A1DDB5DF800F4EE25 /* Main.storyboard */; };
+		F118A7201DDC65E200F4EE25 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F118A71D1DDC65E200F4EE25 /* XMLDictionary.m */; };
+		F118A7211DDC65E200F4EE25 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F118A71F1DDC65E200F4EE25 /* XMLWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		F118A7111DDB5D8100F4EE25 /* PCPaletteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCPaletteView.h; sourceTree = "<group>"; };
 		F118A7121DDB5D8100F4EE25 /* PCPaletteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCPaletteView.m; sourceTree = "<group>"; };
 		F118A71A1DDB5DF800F4EE25 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F118A71C1DDC65E200F4EE25 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		F118A71D1DDC65E200F4EE25 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		F118A71E1DDC65E200F4EE25 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
+		F118A71F1DDC65E200F4EE25 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,10 @@
 		F118A6ED1DDB5D6B00F4EE25 /* PaletteCreator */ = {
 			isa = PBXGroup;
 			children = (
+				F118A71C1DDC65E200F4EE25 /* XMLDictionary.h */,
+				F118A71D1DDC65E200F4EE25 /* XMLDictionary.m */,
+				F118A71E1DDC65E200F4EE25 /* XMLWriter.h */,
+				F118A71F1DDC65E200F4EE25 /* XMLWriter.m */,
 				F118A6F11DDB5D6B00F4EE25 /* AppDelegate.h */,
 				F118A6F21DDB5D6B00F4EE25 /* AppDelegate.m */,
 				F118A7051DDB5D8100F4EE25 /* PaletteInfo.h */,
@@ -184,8 +194,10 @@
 				F118A7171DDB5D8100F4EE25 /* PCPalette.m in Sources */,
 				F118A7141DDB5D8100F4EE25 /* PalettesListViewController.m in Sources */,
 				F118A7181DDB5D8100F4EE25 /* PCPaletteCellTableViewCell.m in Sources */,
+				F118A7211DDC65E200F4EE25 /* XMLWriter.m in Sources */,
 				F118A6F31DDB5D6B00F4EE25 /* AppDelegate.m in Sources */,
 				F118A7191DDB5D8100F4EE25 /* PCPaletteView.m in Sources */,
+				F118A7201DDC65E200F4EE25 /* XMLDictionary.m in Sources */,
 				F118A6F01DDB5D6B00F4EE25 /* main.m in Sources */,
 				F118A7151DDB5D8100F4EE25 /* PCColor.m in Sources */,
 				F118A7131DDB5D8100F4EE25 /* PaletteInfo.m in Sources */,
@@ -340,6 +352,7 @@
 				F118A7041DDB5D6B00F4EE25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
